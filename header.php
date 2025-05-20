@@ -4,7 +4,7 @@
 
    <div class="flex">
 
-      <a href="http://localhost/restaurant/products.php" class="logo">foodies</a>
+      <h1  class="logo">foodies</h1>
 
       >
 

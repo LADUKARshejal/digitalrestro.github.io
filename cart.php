@@ -88,7 +88,7 @@ if(isset($_GET['delete_all'])){
          <tr>
             <td><img src="image/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
             <td><?php echo $fetch_cart['name']; ?></td>
-            <td>$<?php echo number_format($fetch_cart['prise']); ?>/-</td>
+            <td>&#8377;<?php echo number_format($fetch_cart['prise']); ?>/-</td>
             <td>
                <form action="" method="post">
                   <input type="hidden" name="update_quantity_id"  value="<?php echo $fetch_cart['id']; ?>" >
@@ -96,7 +96,7 @@ if(isset($_GET['delete_all'])){
                   <input type="submit" value="update" name="update_update_btn">
                </form>   
             </td>
-            <td>$<?php echo $sub_total = number_format($fetch_cart['prise'] * $fetch_cart['quantity']); ?>/-</td>
+            <td>&#8377;<?php echo $sub_total = number_format($fetch_cart['prise'] * $fetch_cart['quantity']); ?>/-</td>
             <td><a href="cart.php?remove=<?php echo $fetch_cart['id']; ?>&nam=<?php echo $name_;?>" onclick="return confirm('remove item from cart?')" class="delete-btn"> <i class="fas fa-trash"></i> remove</a></td>
          </tr>
          <?php
@@ -107,7 +107,7 @@ if(isset($_GET['delete_all'])){
          <tr class="table-bottom">
             <td><a href="products.php?nam=<?php echo $name_;?>" class="option-btn" style="margin-top: 0;">continue shopping</a></td>
             <td colspan="3">grand total</td>
-            <td>$<?php echo $grand_total; ?>/-</td>
+            <td>&#8377;<?php echo $grand_total; ?>/-</td>
             <td><a href="cart.php?delete_all&nam=<?php echo $name_;?>" onclick="return confirm('are you sure you want to delete all?');" class="delete-btn"> <i class="fas fa-trash"></i> delete all </a></td>
          </tr>
 

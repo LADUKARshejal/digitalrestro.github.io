@@ -23,7 +23,7 @@ if(isset($_POST['add_to_cart_Main_Course'])){
 
    $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE (name = '$product_name' AND table_number ='$name_')");
 
-   if(mysqli_num_rows($select_cart) > 10){
+   if(mysqli_num_rows($select_cart) > 0){
       $message[] = 'product already added to cart';
    }else{
       $insert_product = mysqli_query($conn, "INSERT INTO `cart`(name, prise, image, quantity,table_number,is_confirmed) VALUES('$product_name', '$product_price', '$product_image', '$product_quantity','$name_',0)");
@@ -31,6 +31,8 @@ if(isset($_POST['add_to_cart_Main_Course'])){
    }
 
 }
+
+
 if(isset($_POST['add_to_cart_starters'])){
 
    $product_name = $_POST['product_name'];
@@ -109,7 +111,7 @@ if(isset($message)){
          <div class="box">
             <img src="image/<?php echo $fetch_product['image']; ?>" alt="" width="280px" height="200px" >
             <h3><?php echo $fetch_product['name']; ?></h3>
-            <div class="price">$<?php echo $fetch_product['prise']; ?>/-</div>
+            <div class="price">&#8377;<?php echo $fetch_product['prise']; ?>/-</div>
             <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
             <input type="hidden" name="product_price" value="<?php echo $fetch_product['prise']; ?>">
             <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
@@ -146,7 +148,7 @@ if(isset($message)){
          <div class="box">
             <img src="image/<?php echo $fetch_product['image']; ?>" alt="" width="280px" height="200px">
             <h3><?php echo $fetch_product['name']; ?></h3>
-            <div class="price">$<?php echo $fetch_product['prise']; ?>/-</div>
+            <div class="price">&#8377;<?php echo $fetch_product['prise']; ?>/-</div>
             <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
             <input type="hidden" name="product_price" value="<?php echo $fetch_product['prise']; ?>">
             <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">

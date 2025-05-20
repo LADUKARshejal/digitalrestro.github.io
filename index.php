@@ -1,3 +1,4 @@
+
 <?php
 include 'connect.php';
 ?>
@@ -27,7 +28,7 @@ include 'connect.php';
 
         header {
             /* background: linear-gradient(rgb(18 20 28), rgb(82 177 182)); */
-            background: #000046;  fallback for old browsers
+           /* background: #000046;  fallback for old browsers
 background: -webkit-linear-gradient(to bottom, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to bottom, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             
@@ -152,7 +153,7 @@ background: linear-gradient(to bottom, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, 
             </section>
     </main>
 
-    <footer>Copyright @ 2022</footer>
+    <footer>Copyright @ 2025</footer>
 </body>
 
 </html>

@@ -71,7 +71,7 @@ if(isset($_POST['order_btn'])){
          echo "<div class='display-order'><span>your cart is empty!</span></div>";
       }
       ?>
-      <span class="grand-total"> grand total : $<?= $grand_total; ?>/- </span>
+      <span class="grand-total"> grand total : &#8377;<?= $grand_total; ?>/- </span>
    </div>
 
       <!-- <a href="http://localhost/restaurant/payment.php"> -->
