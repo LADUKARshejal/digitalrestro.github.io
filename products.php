@@ -35,6 +35,7 @@ if(isset($_POST['add_to_cart_Main_Course'])){
 
 if(isset($_POST['add_to_cart_starters'])){
 
+
    $product_name = $_POST['product_name'];
    $product_price = $_POST['product_price'];
 
