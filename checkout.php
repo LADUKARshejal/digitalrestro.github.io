@@ -40,6 +40,7 @@ if(isset($_POST['order_btn'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+   
 
 </head>
 <body>
@@ -51,10 +52,15 @@ if(isset($_POST['order_btn'])){
 <section class="checkout-form">
 
    <h1 class="heading">complete your order</h1>
+   
+
 
    <form action="" method="post">
 
    <div class="display-order">
+      <img src="image/barcod1.jpg" alt="Table Barcode" class="barcode-img" style="display: block; margin: 10px auto 20px auto;
+         max-width: 250px;
+         height: auto;">
       <?php
          $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE table_number=$name_");
          $total = 0;
@@ -73,6 +79,7 @@ if(isset($_POST['order_btn'])){
       ?>
       <span class="grand-total"> grand total : &#8377;<?= $grand_total; ?>/- </span>
    </div>
+   
 
       <!-- <a href="http://localhost/restaurant/payment.php"> -->
          <form action="" method="post">
